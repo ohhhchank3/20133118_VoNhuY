@@ -1,9 +1,6 @@
 import os
 import openai
-from dotenv import load_dotenv
 
-# Load environment variables from .env file
-load_dotenv()
 
 def main(messages, model,apikey):
     openai.api_key = apikey
