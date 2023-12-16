@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "gold-optics-406016",
+  "private_key_id": "b60412e9a2bdb9d5942edec20f54bde9beed3be4",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQCgRBH3FiqZ3tu+\nmqphQQRiypcrAePy0uHRHwW1cxmX1DgpWIUI86sTfjWpl6fWhyzPdU0FKUkjLawX\nZbz8jox7WX+4BG9TmV/kwIYwbwhinx6VR0goP8KtUnU/ELKoAyd1oYEbO0QOxL4r\n8G+MMIOEosAuknn3k15kAs6mr+R86BoXHSQhNMVkH4eNCrt6VGR1IWcKm/FCFHQZ\ns60/URvjBHrYkc1qxeF+7WdS3g7AdVYwCQPEoapBScl52I9dPWNBDcdDD+79dWoG\n502Q82PoFt+U994920D4IP8rC8Fazqupg+YvqCzz16cs3D1dvpF7WmZSzK8+HAa1\nHG1oTxKDAgMBAAECggEAN2TPwNOMjfqVgV/8G/lZBrx3W4ofu8JgAuPyGTFbWzsi\n3keWU+3E58vryF5+yIuYVWx53prSiLI0lTG5DKJItCnPF0+RGxgcKPjSaNM31r6g\n13/31NGU/EtP8yhWV/QfI21bLophj6k5Af7sz0vFaYbHXlGKjqQFMBQ4USzikLkr\n/gunq5WE+8y8y/17NN41ypzJkcgeHG3LVVmdbj4vnbYFpI2FzFZNZ4yDf8r6TsE2\nSyNFCSGodXw/UlXe3jSsu3RSuMs0sOR2BdIs3cOC6rBySFeVs1G6hXCrRdPWQpSF\nbutMsqb5fDhY9Zum+PlFl7OLu53oZcNcbaRcxCyAAQKBgQDfHW5OE9WsNqF8GvTs\nLt6jlyUIunSVGn9bfpBK7HisJZJMUMZGyN0O5cBlavk+ah0XbwIuwo/dUL0UwzNu\nqhUq+S+l6PsK1cQZTZk6wyaWS8X3vFGYwW+jbw6EUJFntNHBbJvc+2hvUcs32uzh\nTgl4mXoW5LrYGsUvr1LQxQYigwKBgQC34zg9/SER1udpmdcp59sTFkhylNjt5EWs\nHzf3aeeaxuuzuPz/5fz299CeIiLP9MBAbDP9mSls14r6nhW4uc65eitz4okwU1kt\nKpaZJ++al/vFtQGb7oasPJffuXFO3LNdeT9sReIHGfVpa9S6FQn26/1LJRbQFvSg\n2tVK/YBQAQKBgQCgFQ/FuXl/3Jq03uqIY4Cew51wy8dGDAMA9Kg2+cADU9nKI9J/\nizMAs1v96Gj4nU5ON/nK7xIl6v4fXYcTibkyYiQL2EP3HDVdKk4c2VRgVfGutFGf\nVnrxOoeh6+TIEfbF31Vdkoz2Aiva4ZtAdKta+lOdBXQCBgMhGZxD6nliXQKBgFz0\njpS/Zb0n3plCPEMhwlu2su7BEZvH/fRRX7BBJ+PU1IdoZvRQ5XxOr3WQmfp3pcur\nJuj2SLuNheLEkQRtYPPfryGIjYMRTw4G7lQDnRqP46UAqAyUGh3tD3T3wDB2XnFM\n/mOUO/sNA0LEUKe0RPI+Py+CUzLjt8usc4/R79ABAoGBAN6DXc9NGCvaOXjAySvF\ncBXtcHyvqBjfQdz/V6VVFJ91re0PIzA+mq62W2mT8BrlaHWn6YQi0E7ZVtugjpQT\niblJ0LleyXvnwoySK+QsFVqcTE3CtiLBSLyxfgG8Cd/jLUdCCTUPbcTj73T3mrZg\nnUCYzKAH16AgOMvM5CviKox/\n-----END PRIVATE KEY-----\n",
+  "client_email": "speech-demo123@gold-optics-406016.iam.gserviceaccount.com",
+  "client_id": "116688503589433123921",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/speech-demo123%40gold-optics-406016.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}
