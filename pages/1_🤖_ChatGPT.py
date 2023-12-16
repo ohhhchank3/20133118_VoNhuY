@@ -587,17 +587,17 @@ def render_sidebar():
     # Set up the sidebar components
     chat_name_container = st.sidebar.container()
     chat_config_expander = st.sidebar.expander('⚙️ Cấu hình Chat', True)
-    tab_gpt,tab_rapid, tab_prompt, tab_bard, chatgpt_mykey,huggingface = chat_config_expander.tabs(
-        ['🌐  ChatBot','❄️ Rapid API','👥 Hộp thoại gợi ý', '🌏  Google Bard', '📚  ChatGPT use APIKey',"🤗 Hugging Face"]
+    tab_gpt,tab_rapid,huggingface = chat_config_expander.tabs(
+        ['🌐  ChatBot','❄️ Rapid API',"🤗 Hugging Face"]
     )
     download_zone = st.sidebar.empty()
     github_zone = st.sidebar.empty()
     # Render the content of each tab
     render_sidebar_gpt_config_tab(tab_gpt)
     render_sidebar_rapidapi_config_tab(tab_rapid)
-    render_sidebar_prompt_config_tab(tab_prompt)
-    render_sidebar_google_bard_config_tab(tab_bard)
-    render_sidebar_gpt_using_my_key_config_tab(chatgpt_mykey)
+    # render_sidebar_prompt_config_tab(tab_prompt)
+    # render_sidebar_google_bard_config_tab(tab_bard)
+    # render_sidebar_gpt_using_my_key_config_tab(chatgpt_mykey)
    # render_sidebar_using_model_finetune_config_tab(model_finetune)
     render_sidebar_huggingface_config_tab(huggingface)
     render_sidebar_chat_management(chat_name_container)
