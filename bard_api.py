@@ -25,8 +25,8 @@ session.cookies.set("__Secure-1PSID","eAjOKiNPwlQLDpSFLWY8fpBHMd7hEVobhROPX7mRp6
 session.cookies.set("__Secure-1PSIDTS", "sidts-CjEBPVxjSomDCWRWS5QqbjgMVZFSEuSSlA2nyg3G6iHqBL_CIGFvspCmDFL7WpdcFZuqEAA")
 session.cookies.set("__Secure-1PSIDCC", "ACA-OxO-YUwxJC9dyCR4YwMw4ckHRezMGeDVNP5rUUJLRpbyKmOkOYN6bRwl-dMU0rcbo2tuE4B_")
 
-bard = Bard(token="eAjOKiNPwlQLDpSFLWY8fpBHMd7hEVobhROPX7mRp6ZISrljhCT0_oOR8mB-kGVgm2waXg.", session=session)
-#bard = BardCookies(token_from_browser=True,conversation_id='c_7a7d053b12de17bb')
+#bard = Bard(token="eAjOKiNPwlQLDpSFLWY8fpBHMd7hEVobhROPX7mRp6ZISrljhCT0_oOR8mB-kGVgm2waXg.", session=session)
+bard = BardCookies(token_from_browser=True,conversation_id='c_7a7d053b12de17bb')
 
 def send_message(message):
     try:
