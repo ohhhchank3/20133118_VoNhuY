@@ -587,15 +587,15 @@ def render_sidebar():
     # Set up the sidebar components
     chat_name_container = st.sidebar.container()
     chat_config_expander = st.sidebar.expander('⚙️ Cấu hình Chat', True)
-    tab_gpt,tab_rapid,huggingface = chat_config_expander.tabs(
-        ['🌐  ChatBot','❄️ Rapid API',"🤗 Hugging Face"]
+    tab_gpt,tab_rapid,tab_prompthuggingface = chat_config_expander.tabs(
+        ['🌐  ChatBot','👥 Hộp thoại gợi ý','❄️ Rapid API',"🤗 Hugging Face"]
     )
     download_zone = st.sidebar.empty()
     github_zone = st.sidebar.empty()
     # Render the content of each tab
     render_sidebar_gpt_config_tab(tab_gpt)
     render_sidebar_rapidapi_config_tab(tab_rapid)
-    # render_sidebar_prompt_config_tab(tab_prompt)
+    render_sidebar_prompt_config_tab(tab_prompt)
     # render_sidebar_google_bard_config_tab(tab_bard)
     # render_sidebar_gpt_using_my_key_config_tab(chatgpt_mykey)
    # render_sidebar_using_model_finetune_config_tab(model_finetune)
@@ -604,6 +604,15 @@ def render_sidebar():
     render_download_zone(download_zone)
     render_github_info(github_zone)
     # Gán giá trị cho selected_tab khi không nhấn vào button
+    if tab_prompt.checkbox('👥 Prompt', value=(session_state.selected_tab == 'Prompt')):
+        session_state.selected_tab = 'Prompt'
+        session_state.gpt_checked = False
+        session_state.bard_checked = False
+        session_state.apikey_checked = False
+        session_state.finetune_checked = False
+        session_state.huggingface_checked = False
+        session_state.rapidapi_checked = False
+        st.write(f"Đã chọn tab: {session_state.selected_tab}")
     if tab_gpt.checkbox('🌐 ChatGPT', value=(session_state.selected_tab == 'ChatGPT')):
         session_state.selected_tab = 'ChatGPT'
         session_state.prompt_checked = False
