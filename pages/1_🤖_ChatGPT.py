@@ -4,7 +4,7 @@ import time
 import openai
 import pandas as pd
 import streamlit as st
-
+import text_to_speech as tts
 import bard_api as google
 import bard_api_1 as config_bard
 import demo4 as demo
@@ -831,6 +831,7 @@ def render_last_answer2(question, chat, zone):
         chat["answer"].append(answer)
         chat["messages"].append({"role": "assistant", "content": answer})
         render_ai_message(answer, answer_zone)
+        tts.text_to_speech_and_play(answer)
     elif st.session_state["params"]["model"] in {'gpt-3.5-turbo','gpt-3.5-turbo-1106'}:
        with st.spinner("Chờ phản hồi..."):
         model_value = st.session_state["params"]["model"]
@@ -873,6 +874,7 @@ def render_last_answer2(question, chat, zone):
           chat["answer"].append(answer)
           chat["messages"].append({"role": "assistant", "content": answer})
           render_ai_message(answer, answer_zone)
+          tts.text_to_speech_and_play(answer)
         else:
          with st.spinner("Chờ phản hồi..."):
           token = st.session_state["params"]["max_tokens1_1"]
