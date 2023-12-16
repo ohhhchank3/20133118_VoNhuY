@@ -1,0 +1,11 @@
+openai
+openpyxl
+pandas
+streamlit
+transformers
+torch
+numpy
+bardapi
+gradio 
+
+
