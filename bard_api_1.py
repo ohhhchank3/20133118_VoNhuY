@@ -23,8 +23,8 @@ session = requests.Session()
 session.headers = SESSION_HEADERS
 
 session.cookies.set("__Secure-1PSID","eAjOKiNPwlQLDpSFLWY8fpBHMd7hEVobhROPX7mRp6ZISrljhCT0_oOR8mB-kGVgm2waXg.")
-session.cookies.set("__Secure-1PSIDTS", "sidts-CjEBPVxjSmsADUzw4772LBm7ev_yrlsdIZVcw3w3mcbjDK-unWx0FtMtN1o4L1pwsR02EAA")
-session.cookies.set("__Secure-1PSIDCC", "ABTWhQHy2WbuaH9xhCF_iOTxH8ShW8SRZSBiUtcRdcKZ1FCmcvpoRO1bKHSkLAEHlVCLAfBnbRDi")
+session.cookies.set("__Secure-1PSIDTS", "sidts-CjEBPVxjSomDCWRWS5QqbjgMVZFSEuSSlA2nyg3G6iHqBL_CIGFvspCmDFL7WpdcFZuqEAA")
+session.cookies.set("__Secure-1PSIDCC", "ACA-OxO-YUwxJC9dyCR4YwMw4ckHRezMGeDVNP5rUUJLRpbyKmOkOYN6bRwl-dMU0rcbo2tuE4B_")
 bard = Bard(token="eAjOKiNPwlQLDpSFLWY8fpBHMd7hEVobhROPX7mRp6ZISrljhCT0_oOR8mB-kGVgm2waXg.", session=session)
 #bard = Bard(token="eAjOKiNPwlQLDpSFLWY8fpBHMd7hEVobhROPX7mRp6ZISrljhCT0_oOR8mB-kGVgm2waXg.", session=session)
 #bard = BardCookies(token_from_browser=True,conversation_id='c_7a7d053b12de17bb')
