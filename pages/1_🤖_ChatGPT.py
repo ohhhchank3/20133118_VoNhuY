@@ -176,6 +176,7 @@ def render_sidebar_huggingface_config_tab(zone):
 
 def render_sidebar_gpt_config_tab(zone):
    st.session_state.sync_flag3 =  'hello'
+   prompt_text5 = zone.empty()
    st.session_state["params"] = dict()
    st.session_state["params"]["model"] = zone.selectbox(
         "Vui lòng chọn loại mô hình bạn muốn sử dụng!!",
@@ -195,7 +196,7 @@ def render_sidebar_gpt_config_tab(zone):
                 help="ID mô hình bạn muốn sử dụng, nên dùng gpt-3.5-turbo-1106 hoặc gpt-3.5-turbo",
             ) 
             real_psid = st.session_state["params"].get("apikey3", "")
-            st.session_state["params"]["apikey3"] = zone.text_input(
+            st.session_state["params"]["apikey3"] = prompt_text5.text_input(
         "Nhập mã API key",
         value='***' if real_psid else "None",
         key="input_psid1112",
