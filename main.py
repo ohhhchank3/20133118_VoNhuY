@@ -106,13 +106,9 @@ def render_welcome():
         nav_page("ChatGPT")
 
 if __name__ == '__main__':
-    if st.session_state.get("authenticated") or not st.secrets.need_login:
-        load_multi_pages()
-        render_welcome()
-    else:
-        hide_multi_pages()
-        login_form = st.empty()
-        if check_password(login_form.form(key='login')):
+    hide_multi_pages()
+    login_form = st.empty()
+    if check_password(login_form.form(key='login')):
             login_form.empty()
             st.balloons()
             load_multi_pages()
