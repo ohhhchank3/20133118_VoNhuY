@@ -19,9 +19,15 @@ def initialize_bard_session(_1PSID, _1PSIDTS, _1PSIDCC):
         "Origin": "https://bard.google.com",
         "Referer": "https://bard.google.com/",
     }
+session = requests.Session()
+session.headers = SESSION_HEADERS
 
+session.cookies.set("__Secure-1PSID","eAjOKiNPwlQLDpSFLWY8fpBHMd7hEVobhROPX7mRp6ZISrljhCT0_oOR8mB-kGVgm2waXg.")
+session.cookies.set("__Secure-1PSIDTS", "sidts-CjEBPVxjSvRL6KPf3aYfzVXVOi51muvlB2GhTfH68W1ozFXLnfGcFYrYiR6rBV2QEZnwEAA")
+session.cookies.set("__Secure-1PSIDCC", "ABTWhQHS68OL-EJsQIUlQo_ETkiIUF7BdcXVRnLfYwGlL3nhi9VsXQKpS6xMmAq95_cwWMFlrPeI")
+bard = Bard(token="eAjOKiNPwlQLDpSFLWY8fpBHMd7hEVobhROPX7mRp6ZISrljhCT0_oOR8mB-kGVgm2waXg.", session=session)
 #bard = Bard(token="eAjOKiNPwlQLDpSFLWY8fpBHMd7hEVobhROPX7mRp6ZISrljhCT0_oOR8mB-kGVgm2waXg.", session=session)
-bard = BardCookies(token_from_browser=True,conversation_id='c_7a7d053b12de17bb')
+#bard = BardCookies(token_from_browser=True,conversation_id='c_7a7d053b12de17bb')
 def send_message(message):
     try:
         answer = bard.get_answer(message)['content']
