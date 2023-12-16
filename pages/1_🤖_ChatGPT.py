@@ -198,7 +198,7 @@ def render_sidebar_gpt_config_tab(zone):
             st.session_state["params"]["apikey3"] = zone.text_input(
         "Nhập mã API key",
         value='***' if real_psid else "None",
-        key="input_psid",
+        key="input_psid1112",
         help="Hãy nhập mã API key",
         type="password"  # Đặt kiểu dữ liệu là password để ẩn giá trị nhập vào
     )
