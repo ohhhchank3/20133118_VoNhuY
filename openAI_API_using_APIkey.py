@@ -2,7 +2,7 @@ import requests
 
 def main(messages, model, apikey):
     url = "https://api.openai.com/v1/chat/completions"
-    api_key = "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"  
+    api_key = apikey
 
     headers = {
         "Content-Type": "application/json",
