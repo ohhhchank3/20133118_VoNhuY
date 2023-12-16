@@ -184,7 +184,7 @@ def render_sidebar_gpt_config_tab(zone):
         help="Nên sử dụng ChatBot_openAPI để dùng các dịch vụ của openAI, dùng Google Bard để sử dụng mô hình do Google tạo ra,LLama là một model mới gần đây",
     )
    real_psid1 = st.session_state["params"].get("apikey_hello", "")
-            st.session_state["params"]["apikey_hello"] = prompt_text5.text_input(
+   st.session_state["params"]["apikey_hello"] = prompt_text5.text_input(
         "Nhập mã API key",
         value='***' if real_psid1 else "None",
         key="input_psid1112",
