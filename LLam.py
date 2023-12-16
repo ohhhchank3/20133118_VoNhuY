@@ -1,7 +1,7 @@
 import requests
 
 def get_assistant_response(question):
-    url = "http://localhost:8000/v1/chat/completions"
+    url = "https://4a5c-42-112-67-85.ngrok-free.app/v1/chat/completions"
 
     # Prepare the JSON body
     json_body = {
