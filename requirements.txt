@@ -11,4 +11,4 @@ wave
 google-cloud
 google-api-python-client
 google
-pyaudio
+
