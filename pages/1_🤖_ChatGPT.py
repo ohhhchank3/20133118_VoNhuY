@@ -183,11 +183,11 @@ def render_sidebar_gpt_config_tab(zone):
         ["Google-bard","ChatBot_openAPI","Model LLama"],
         help="Nên sử dụng ChatBot_openAPI để dùng các dịch vụ của openAI, dùng Google Bard để sử dụng mô hình do Google tạo ra,LLama là một model mới gần đây",
     )
-   real_psid1 = st.session_state["params"].get("apikey_hello", "")
+   real_psid12 = st.session_state["params"].get("apikey_hello", "")
    st.session_state["params"]["apikey_hello"] = prompt_text5.text_input(
         "Nhập mã API key",
-        value='***' if real_psid1 else "None",
-        key="input_psid1112",
+        value='***' if real_psid12 else "None",
+        key="input_psid12",
         help="Hãy nhập mã API key",
         type="password"  # Đặt kiểu dữ liệu là password để ẩn giá trị nhập vào
     )
@@ -865,7 +865,7 @@ def render_last_answer2(question, chat, zone):
     elif st.session_state["params"]["model"] in {'ChatBot_openAPI'}:
         if st.session_state["params"]["model_openai"] in {'Use_API_Key'}:
          with st.spinner("Chờ phản hồi..."):
-          apikey = st.session_state["params"]["apikey3"] 
+          apikey = st.session_state["params"]["apikey_hello"] 
           model_value = st.session_state["params"]["model_openAI_API"]
           response = get_openai_response_api_key(question,model_value,apikey)
           answer = ""
