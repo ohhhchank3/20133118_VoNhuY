@@ -20,12 +20,13 @@ def initialize_bard_session(_1PSID, _1PSIDTS, _1PSIDCC):
 from bardapi import Bard, BardCookies
 session = requests.Session()
 session.headers = SESSION_HEADERS
-session.cookies.set("__Secure-1PSID","eAjOKiNPwlQLDpSFLWY8fpBHMd7hEVobhROPX7mRp6ZISrljhCT0_oOR8mB-kGVgm2waXg.")
-session.cookies.set("__Secure-1PSIDTS", "sidts-CjEBPVxjSm_Q832mLrShRGWALxOfRnviRH_m1ROkPyx56DKCQmTQcQ4tf4JaRZ8K1pM2EAA")
-session.cookies.set("__Secure-1PSIDCC", "ABTWhQEvH8DO0UmeMYGu9rut4p5ZgqDmtBylgjBLnpg-6z2FyegLko12IospIt19I3dZ0vjKUvZj")
 
-#bard = Bard(token="dQg50xvxqQlaPFv-HIPCMdHRatpM2rvBJsUtI6qK-x1MCrG20brE4QEXp9e61BEogRimVw.", session=session)
-bard = BardCookies(token_from_browser=True,conversation_id='c_7a7d053b12de17bb')
+session.cookies.set("__Secure-1PSID","eAjOKiNPwlQLDpSFLWY8fpBHMd7hEVobhROPX7mRp6ZISrljhCT0_oOR8mB-kGVgm2waXg.")
+session.cookies.set("__Secure-1PSIDTS", "sidts-CjEBPVxjSvRL6KPf3aYfzVXVOi51muvlB2GhTfH68W1ozFXLnfGcFYrYiR6rBV2QEZnwEAA")
+session.cookies.set("__Secure-1PSIDCC", "ABTWhQHS68OL-EJsQIUlQo_ETkiIUF7BdcXVRnLfYwGlL3nhi9VsXQKpS6xMmAq95_cwWMFlrPeI")
+
+bard = Bard(token="eAjOKiNPwlQLDpSFLWY8fpBHMd7hEVobhROPX7mRp6ZISrljhCT0_oOR8mB-kGVgm2waXg.", session=session)
+#bard = BardCookies(token_from_browser=True,conversation_id='c_7a7d053b12de17bb')
 
 def send_message(message):
     try:
