@@ -588,7 +588,7 @@ def render_sidebar():
     chat_name_container = st.sidebar.container()
     chat_config_expander = st.sidebar.expander('⚙️ Cấu hình Chat', True)
     tab_gpt,tab_rapid,tab_prompt,huggingface,tab_bard = chat_config_expander.tabs(
-        ['🌐  ChatBot','❄️ Rapid API','👥 Hộp thoại gợi ý',"🤗 Hugging Face",'🌏  Google Bard']
+        ['🌐  ChatBot','❄️ Rapid API','👥 Hộp thoại gợi ý',"🤗 Hugging Face","🌏  Google Bard"]
     )
     download_zone = st.sidebar.empty()
     github_zone = st.sidebar.empty()
