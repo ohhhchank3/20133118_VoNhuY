@@ -49,7 +49,7 @@ flag3 = None
 
 @st.cache_resource
 def init_openai_settings():
-    openai.api_key = st.secrets["OPENAI_API_KEY"]
+    openai.api_key = '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'
     if st.secrets.get("OPENAI_PROXY"):
         openai.proxy = st.secrets["OPENAI_PROXY"]
 
