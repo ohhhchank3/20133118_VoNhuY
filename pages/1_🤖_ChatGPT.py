@@ -856,7 +856,7 @@ def render_last_answer2(question, chat, zone):
         if st.session_state["params"]["model_openai"] in {'Use_API_Key'}:
          with st.spinner("Chờ phản hồi..."):
           model_value = st.session_state["params"]["model_openAI_API"]
-          response = get_openai_response_api_key(question,model_value,keyOpenAI)
+          response = get_openai_response_api_key(question,model_value,"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")
           answer = ""
           answer = response
           chat["answer"].append(answer)
