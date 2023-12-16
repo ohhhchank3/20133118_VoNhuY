@@ -42,7 +42,7 @@ originalID = ""
 keyOpenAIdvc = os.environ["keyOpenAI_dvc"]
 originalID = os.environ["originalID"]
 keyOpenAI = ""
-keyOpenAI = "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"
+keyOpenAI = "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"
 flag1 = None
 flag2 = None
 flag3 = None
@@ -856,7 +856,7 @@ def render_last_answer2(question, chat, zone):
         if st.session_state["params"]["model_openai"] in {'Use_API_Key'}:
          with st.spinner("Chờ phản hồi..."):
           model_value = st.session_state["params"]["model_openAI_API"]
-          response = get_openai_response_api_key(question,model_value,"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")
+          response = get_openai_response_api_key(question,model_value,"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")
           answer = ""
           answer = response
           chat["answer"].append(answer)
