@@ -613,33 +613,6 @@ def render_sidebar():
         session_state.huggingface_checked = False
         session_state.rapidapi_checked = False
         st.write(f"Đã chọn tab: {session_state.selected_tab}")
-    if tab_prompt.checkbox('👥 Prompt', value=(session_state.selected_tab == 'Prompt')):
-        session_state.selected_tab = 'Prompt'
-        session_state.gpt_checked = False
-        session_state.bard_checked = False
-        session_state.apikey_checked = False
-        session_state.finetune_checked = False
-        session_state.huggingface_checked = False
-        session_state.rapidapi_checked = False
-        st.write(f"Đã chọn tab: {session_state.selected_tab}")
-    if tab_bard.checkbox('🌏 Google Bard', value=(session_state.selected_tab == 'Google Bard')):
-        session_state.selected_tab = 'Google Bard'
-        session_state.gpt_checked = False
-        session_state.prompt_checked = False
-        session_state.apikey_checked = False
-        session_state.finetune_checked = False
-        session_state.rapidapi_checked = False
-        session_state.huggingface_checked = False
-        st.write(f"Đã chọn tab: {session_state.selected_tab}")
-    if chatgpt_mykey.checkbox('📚 ChatGPT APIKey', value=(session_state.selected_tab == 'ChatGPT APIKey')):
-        session_state.selected_tab = 'ChatGPT APIKey'
-        session_state.gpt_checked = False
-        session_state.prompt_checked = False
-        session_state.rapidapi_checked = False
-        session_state.bard_checked = False
-        session_state.finetune_checked = False
-        session_state.huggingface_checked = False
-        st.write(f"Đã chọn tab: {session_state.selected_tab}")
     if huggingface.checkbox('🤗 Hugging Face', value=(session_state.selected_tab == 'HuggingFace')):
         session_state.selected_tab = 'HuggingFace'
         session_state.gpt_checked = False
