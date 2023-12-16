@@ -1,0 +1,14 @@
+[server]
+port = 9090
+[theme]
+base = 'dark'
+#primaryColor = "#FF4B4B"  # Một màu xanh lá cây tối khác
+primaryColor = "#00FFCC"
+secondaryBackgroundColor = "#1E1E1E"  # Màu nền đen hơn
+accentColor = "#FFD700"  # Màu accent, ví dụ như màu vàng
+textColor = "#CCCCCC"  # Màu chữ xám nhạt trên nền đen
+font="serif"
+#textColor = "#CCCCCC"
+
+#secondaryBackgroundColor="#889197"
+#secondaryBackgroundColor="#323335"
