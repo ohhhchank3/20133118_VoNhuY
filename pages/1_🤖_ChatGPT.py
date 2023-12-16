@@ -194,6 +194,7 @@ def render_sidebar_gpt_config_tab(zone):
                 ["gpt-3.5-turbo", "gpt-3.5-turbo-16k-0613", "gpt-3.5-turbo-1106", "gpt-3.5-turbo-0613", "gpt-3.5-turbo-0301", "gpt-3.5-turbo-16k"],
                 help="ID mô hình bạn muốn sử dụng, nên dùng gpt-3.5-turbo-1106 hoặc gpt-3.5-turbo",
             ) 
+            real_psid = st.session_state["params"].get("apikey3", "")
             st.session_state["params"]["apikey3"] = zone.text_input(
         "Nhập mã API key",
         value='***' if real_psid else "None",
