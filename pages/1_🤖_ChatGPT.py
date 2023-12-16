@@ -183,7 +183,21 @@ def render_sidebar_gpt_config_tab(zone):
         ["Google-bard","ChatBot_openAPI","Model LLama"],
         help="Nên sử dụng ChatBot_openAPI để dùng các dịch vụ của openAI, dùng Google Bard để sử dụng mô hình do Google tạo ra,LLama là một model mới gần đây",
     )
-
+   real_psid1 = st.session_state["params"].get("apikey_hello", "")
+            st.session_state["params"]["apikey_hello"] = prompt_text5.text_input(
+        "Nhập mã API key",
+        value='***' if real_psid1 else "None",
+        key="input_psid1112",
+        help="Hãy nhập mã API key",
+        type="password"  # Đặt kiểu dữ liệu là password để ẩn giá trị nhập vào
+    )
+    st.session_state["params"]["apikey3"] = prompt_text5.text_input(
+        "Nhập mã API key",
+        value='***' if real_psid else "None",
+        key="input_psid1112",
+        help="Hãy nhập mã API key",
+        type="password"  # Đặt kiểu dữ liệu là password để ẩn giá trị nhập vào
+    )
    if st.session_state["params"]["model"] == "ChatBot_openAPI":
         st.session_state["params"]["model_openai"] = zone.selectbox(
         "Vui lòng chọn hình thức sử dụng",
