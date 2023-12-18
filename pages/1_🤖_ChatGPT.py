@@ -4,8 +4,8 @@ import time
 import openai
 import pandas as pd
 import streamlit as st
-import bard_api as google
-import bard_api_1 as config_bard
+
+
 import demo4 as demo
 import doctep as apikey1
 import doctepdavinci as doctep
@@ -800,23 +800,7 @@ def render_last_answer4(question,chat,zone):
           chat["messages"].append({"role": "assistant", "content": answer})
           render_ai_message(answer, answer_zone)
 
-def render_last_answer3(question,chat,zone):
-        with st.spinner("Chờ phản hồi..."):
-         flag2 = False
-         chat["messages"].append(question)
-         chat["question"].append(question)
-         response = ''
-         answer_zone = zone.empty()
-         psid =st.session_state["params"]["1_PSID"]
-         psidts =st.session_state["params"]["1_PSIDTS"]
-         psidcc =st.session_state["params"]["1_PSIDCC"]
-         answer = ""
-         bard1 = config_bard.initialize_bard_session(psid,psidts,psidcc)
-         response = config_bard.send_message(question)
-         answer = response
-         chat["answer"].append(answer)
-         chat["messages"].append({"role": "assistant", "content": answer})
-         render_ai_message(answer, answer_zone)
+
 
 def render_last_answer2(question, chat, zone):
     answer_zone = zone.empty()
@@ -834,12 +818,8 @@ def render_last_answer2(question, chat, zone):
         render_ai_message(answer, answer_zone)
     elif st.session_state["params"]["model"] in {'Google-bard'}:
       with st.spinner("Chờ phản hồi..."):
-        response = get_openai_response3(question)
         answer = ""
         answer = response
-        chat["answer"].append(answer)
-        chat["messages"].append({"role": "assistant", "content": answer})
-        render_ai_message(answer, answer_zone)
     elif st.session_state["params"]["model"] in {'gpt-3.5-turbo','gpt-3.5-turbo-1106'}:
        with st.spinner("Chờ phản hồi..."):
         model_value = st.session_state["params"]["model"]
@@ -948,8 +928,6 @@ def render_chat(chat_name):
             render_stop_generate_button(stop_generate_zone)
             if st.session_state.selected_tab in ['ChatGPT','Prompt'] :
                 render_last_answer2(st.session_state['input'], chat, last_answer_zone)
-            if st.session_state.selected_tab == 'Google Bard' and st.session_state["params"]["1_PSID"] not in["None"]:
-                render_last_answer3(st.session_state["input"],chat,last_answer_zone)
             if st.session_state.selected_tab == 'ChatGPT APIKey' and st.session_state["params"]["api_key1"]not in["None"]:
                 render_last_answer4(st.session_state["input"],chat,last_answer_zone)
             if st.session_state.selected_tab == 'HuggingFace':
@@ -989,8 +967,6 @@ def render_chat(chat_name):
         render_stop_generate_button(stop_generate_zone)
         if st.session_state.selected_tab in ['ChatGPT','Prompt'] :
                 render_last_answer2(st.session_state['last_question'], chat, last_answer_zone)
-        if st.session_state.selected_tab == 'Google Bard' and st.session_state["params"]["1_PSID"] not in["None"]:
-                render_last_answer3(st.session_state["last_question"],chat,last_answer_zone)
         if st.session_state.selected_tab == 'ChatGPT APIKey' and st.session_state["params"]["api_key1"]not in["None"]:
                 render_last_answer4(st.session_state["last_question"],chat,last_answer_zone)
         if st.session_state.selected_tab == 'HuggingFace':
@@ -1008,9 +984,6 @@ def get_openai_response1(messages,model,temperature,pre,fre,token,top_p):
     return response
 def get_openai_response2(messages):
     return None
-def get_openai_response3(messages):
-    response = google.send_message(messages)
-    return response
 def get_openai_response_api_key(messages,model,apikey):
     response = openai_key.main(messages,model,apikey)
     return response
