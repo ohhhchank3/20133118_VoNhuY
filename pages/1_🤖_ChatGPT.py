@@ -22,6 +22,7 @@ import rapidapi1
 import rapidapi2
 import rapidapi3
 import rapidapi_kethop2
+import text_to_speech as tts
 import ViT5 as viT5
 from utils import (load_prompt_templates, load_prompts, render_footer,
                    render_github_info)
@@ -685,6 +686,7 @@ def render_last_answer7(question,chat,zone):
         answer = response
         chat["answer"].append(answer)
         chat["messages"].append({"role": "assistant", "content": answer})
+        tts.text_to_speech(answer)
     if st.session_state["params"]["model_rapid"] in {'ChatGPT'}:
       with st.spinner("Chờ phản hồi..."):
         processed_question = ' '.join(question.split())
@@ -694,6 +696,7 @@ def render_last_answer7(question,chat,zone):
         chat["answer"].append(answer)
         chat["messages"].append({"role": "assistant", "content": answer})
         render_ai_message(answer, answer_zone)
+        tts.text_to_speech(answer)
     if st.session_state["params"]["model_rapid"] in {'BingChat'}:
       with st.spinner("Chờ phản hồi..."):
         processed_question = ' '.join(question.split())
@@ -703,6 +706,7 @@ def render_last_answer7(question,chat,zone):
         chat["answer"].append(answer)
         chat["messages"].append({"role": "assistant", "content": answer})
         render_ai_message(answer, answer_zone)
+        tts.text_to_speech(answer)
     if st.session_state["params"]["model_rapid"] in {'Lemurbot'}:
       with st.spinner("Chờ phản hồi..."):
         processed_question = ' '.join(question.split())
@@ -712,6 +716,7 @@ def render_last_answer7(question,chat,zone):
         chat["answer"].append(answer)
         chat["messages"].append({"role": "assistant", "content": answer})
         render_ai_message(answer, answer_zone)
+        tts.text_to_speech(answer)
 
 def render_last_answer6(question,chat,zone):
     answer_zone = zone.empty()
@@ -727,6 +732,8 @@ def render_last_answer6(question,chat,zone):
         answer = response
         chat["answer"].append(answer)
         chat["messages"].append({"role": "assistant", "content": answer})
+        render_ai_message(answer, answer_zone)
+        tts.text_to_speech(answer)
       elif st.session_state["params"]["model_llama_4"] in {'LLama VietNamese'}:
        with st.spinner("Chờ phản hồi..."):
         response = llamvi.get_assistant_response(question)
@@ -734,6 +741,7 @@ def render_last_answer6(question,chat,zone):
         answer = response
         chat["answer"].append(answer)
         chat["messages"].append({"role": "assistant", "content": answer})
+        tts.text_to_speech(answer)
     elif st.session_state["params"]["model_4"] in {'GPT2'}:
       with st.spinner("Chờ phản hồi..."):
         processed_question = ' '.join(question.split())
@@ -743,6 +751,7 @@ def render_last_answer6(question,chat,zone):
         chat["answer"].append(answer)
         chat["messages"].append({"role": "assistant", "content": answer})
         render_ai_message(answer, answer_zone)
+        tts.text_to_speech(answer)
     else:
       with st.spinner("Chờ phản hồi..."):
         processed_question = ' '.join(question.split())
@@ -752,6 +761,7 @@ def render_last_answer6(question,chat,zone):
         chat["answer"].append(answer)
         chat["messages"].append({"role": "assistant", "content": answer})
         render_ai_message(answer, answer_zone)
+        tts.text_to_speech(answer)
     
 
 
@@ -773,6 +783,7 @@ def render_last_answer4(question,chat,zone):
           chat["answer"].append(answer)
           chat["messages"].append({"role": "assistant", "content": answer})
           render_ai_message(answer, answer_zone)
+          tts.text_to_speech(answer)
     elif st.session_state["params"]["model_key"] in {'text-davinci-003_API'}:
          with st.spinner("Chờ phản hồi..."):
           key = ''
@@ -790,6 +801,7 @@ def render_last_answer4(question,chat,zone):
           chat["answer"].append(answer)
           chat["messages"].append({"role": "assistant", "content": answer})
           render_ai_message(answer, answer_zone)
+          tts.text_to_speech(answer)
 
 def render_last_answer3(question,chat,zone):
         with st.spinner("Chờ phản hồi..."):
@@ -831,7 +843,7 @@ def render_last_answer2(question, chat, zone):
         chat["answer"].append(answer)
         chat["messages"].append({"role": "assistant", "content": answer})
         render_ai_message(answer, answer_zone)
-        tts.text_to_speech_and_play(answer)
+        tts.text_to_speech(answer)
     elif st.session_state["params"]["model"] in {'gpt-3.5-turbo','gpt-3.5-turbo-1106'}:
        with st.spinner("Chờ phản hồi..."):
         model_value = st.session_state["params"]["model"]
@@ -865,6 +877,7 @@ def render_last_answer2(question, chat, zone):
           chat["answer"].append(answer)
           chat["messages"].append({"role": "assistant", "content": answer})
           render_ai_message(answer, answer_zone)
+          tts.text_to_speech(answer)
         elif st.session_state["params"]["model_openai"] in {'Use_Breaber_Token'}:
          with st.spinner("Chờ phản hổi..."):
           model_value = st.session_state["params"]["model_openAI_API"]
@@ -874,7 +887,7 @@ def render_last_answer2(question, chat, zone):
           chat["answer"].append(answer)
           chat["messages"].append({"role": "assistant", "content": answer})
           render_ai_message(answer, answer_zone)
-          tts.text_to_speech_and_play(answer)
+          tts.text_to_speech(answer)
         else:
          with st.spinner("Chờ phản hồi..."):
           token = st.session_state["params"]["max_tokens1_1"]
@@ -887,6 +900,7 @@ def render_last_answer2(question, chat, zone):
           chat["answer"].append(answer)
           chat["messages"].append({"role": "assistant", "content": answer})
           render_ai_message(answer, answer_zone)
+          tts.text_to_speech(answer)
     else:
         if st.session_state["params"]["stream"]:
             with st.spinner("Chờ phản hồi..."):
@@ -902,6 +916,8 @@ def render_last_answer2(question, chat, zone):
                 chat["answer"].append(answer)
                 chat["messages"].append({"role": "assistant", "content": answer})
                 render_ai_message(answer, answer_zone)
+                tts.text_to_speech(answer)
+            
         else:
             with st.spinner("Chờ phản hồi..."):
                 model_value = st.session_state["params"]["model"]
