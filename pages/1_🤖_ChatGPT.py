@@ -179,7 +179,7 @@ def render_sidebar_gpt_config_tab(zone):
    st.session_state["params"] = dict()
    st.session_state["params"]["model"] = zone.selectbox(
         "Vui lòng chọn loại mô hình bạn muốn sử dụng!!",
-        ["Google-bard","ChatBot_openAPI","Model LLama"],
+        ["ChatBot_openAPI"],
         help="Nên sử dụng ChatBot_openAPI để dùng các dịch vụ của openAI, dùng Google Bard để sử dụng mô hình do Google tạo ra,LLama là một model mới gần đây",
     )
    real_psid12 = st.session_state["params"].get("apikey_hello", "")
