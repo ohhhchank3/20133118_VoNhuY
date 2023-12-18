@@ -4,7 +4,6 @@ import time
 import openai
 import pandas as pd
 import streamlit as st
-import text_to_speech as tts
 import bard_api as google
 import bard_api_1 as config_bard
 import demo4 as demo
