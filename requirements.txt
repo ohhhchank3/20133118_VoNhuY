@@ -13,4 +13,3 @@ google-api-python-client
 google
 pydub
 google-cloud-texttospeech
-pyaudio
